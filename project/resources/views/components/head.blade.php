@@ -5,4 +5,5 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>TicketShop</title>
         @vite('resources/css/app.css')
+        <x-css/>
     </head>
