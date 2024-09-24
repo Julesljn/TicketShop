@@ -1,9 +1,6 @@
 <x-head/>
-    <body>
-        <x-home-header/>
-        <main class="bg">
-
-        </main>
+    <body class="p-6">
+        <div class="bg"></div> 
+        <x-home.home-header/>
     </body>
 </html>
-!
