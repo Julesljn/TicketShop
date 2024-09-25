@@ -31,3 +31,4 @@ project/public/js
 # logs #
 ######################
 *.log
+project/.DS_Store
