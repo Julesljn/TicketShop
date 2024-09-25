@@ -29,15 +29,16 @@
                         placeholder="Date de Naissance" name="birthday">
                 </div>
                 @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-                <button type="submit" class="p-6 px-16 border-2 rounded-full text-white text-lg mt-8">S'inscrire</button>
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <button type="submit"
+                    class="p-6 px-16 border-2 rounded-full text-white text-lg mt-8">S'inscrire</button>
             </form>
         </div>
     </main>
