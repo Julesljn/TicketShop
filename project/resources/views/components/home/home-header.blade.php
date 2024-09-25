@@ -1,5 +1,5 @@
 <header class="text-white flex items-center justify-between relative">
-    <h1 class="text-3xl"><a href="/">TicketShop</a></h1>
+    <h1 class="text-3xl"><a href="{{ route('home') }}">TicketShop</a></h1>
     <nav>
         <ul class="flex gap-32 p-6 rounded-full border-2">
             <li><a href="">Accueil</a></li>
