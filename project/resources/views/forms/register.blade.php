@@ -37,7 +37,8 @@
                         </ul>
                     </div>
                 @endif
-                <button type="submit" class="btn p-6 px-16 border-2 rounded-full text-white text-lg mt-8">S'inscrire</button>
+                <button type="submit"
+                    class="btn p-6 px-16 border-2 rounded-full text-white text-lg mt-8">S'inscrire</button>
             </form>
         </div>
     </main>
