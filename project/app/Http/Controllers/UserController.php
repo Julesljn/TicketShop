@@ -28,11 +28,27 @@ class UserController extends Controller
     }
     public function userLogin(LoginRequest $request)
     {
-        $credentials = $request->only('email','password'); // Je prend que email, password
+        $credentials = $request->only('email', 'password'); // Je prend que email, password
         if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();   
+            $request->session()->regenerate();
             return redirect()->route(route: 'home');
         }
-        return redirect()->route(route: 'login')->withErrors('Adresse Email ou Mot de passe incorrect');
+        return redirect()->route(route: 'login')->withErrors(provider: 'Adresse Email ou Mot de passe incorrect');
+    }
+    public function userLogout()
+    {
+        Auth::logout();
+        return redirect()->route(route: 'home');
+    }
+    public function userDelete()
+    {
+        $user = Auth::user();
+
+        if ($user) {
+            $user->delete();
+            Auth::logout();
+            return redirect()->route(route: 'home');
+        }
+
     }
 }

@@ -29,6 +29,7 @@
             </form>
         </div>
     </main>
+    @vite('resources/js/form.js')
 </body>
 
 </html>

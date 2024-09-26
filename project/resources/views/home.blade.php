@@ -1,6 +1,6 @@
 <x-head/>
     <body class="p-6">
-        <div class="bg"></div> 
+        <div class="bg"></div>
         <x-headers.home-header/>
         <main class="relative">
             <div class="mt-16">

@@ -8,7 +8,13 @@
         </ul>
     </nav>
     <div class="flex gap-20">
-        <a class="py-6 px-10 rounded-full border-2" href="/register">S'inscrire</a>
-        <a class="py-6 px-10 rounded-full border-2 bg-white text-black" href="/login">Se Connecter</a>
+        @auth
+            <a class="py-6 px-10 rounded-full border-2" href="{{ route('menu') }}">Mon Espace</a>
+            <a class="py-6 px-10 rounded-full border-2" href="{{ route('profil') }}">Mon profil</a>
+        @else
+        
+            <a class="py-6 px-10 rounded-full border-2" href="{{ route('register') }}">S'inscrire</a>
+            <a class="py-6 px-10 rounded-full border-2 bg-white text-black" href="{{ route('login') }}">Se Connecter</a>
+        @endauth
     </div>
 </header>
