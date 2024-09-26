@@ -33,4 +33,5 @@ project/_ide_helper.php
 # logs #
 ######################
 *.log
-*.DS_Store
+**/.DS_Store
+
