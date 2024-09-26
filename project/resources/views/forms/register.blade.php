@@ -2,7 +2,7 @@
 
 <body class="p-6">
     <div class="bg"></div>
-    <x-forms.form-header />
+    <x-headers.form-header />
     <main class="relative">
         <div class="mt-[10vh]">
             <form class="flex flex-col items-center gap-10 text-lg text-white" method="POST"

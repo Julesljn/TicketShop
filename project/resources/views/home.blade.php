@@ -1,7 +1,7 @@
 <x-head/>
     <body class="p-6">
         <div class="bg"></div> 
-        <x-home.home-header/>
+        <x-headers.home-header/>
         <main class="relative">
             <div class="mt-16">
                 {{-- <video autoplay muted loop>
