@@ -28,8 +28,9 @@ project/_ide_helper.php
 *.rar
 *.tar
 *.zip
+*hot
 
 # logs #
 ######################
 *.log
-project/.DS_Store
+*.DS_Store
