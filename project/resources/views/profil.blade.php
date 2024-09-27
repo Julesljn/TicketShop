@@ -14,7 +14,7 @@
             </div>
             <div class="h-full w-[40vw] flex">
                 <div class="h-full w-[20vw] mt-10">
-                    <form class="text-white flex flex-col ml-8 gap-6" action="">
+                    <form class="text-white flex flex-col ml-8 gap-6" action="{{ route('user.update') }}" method="POST">
                         <div class="flex flex-col">
                             <label class="ml-6 mb-2" for="first_name">Prénom</label>
                             <div class="container__input p-4 border-2 rounded-full w-[18vw]">

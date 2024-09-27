@@ -14,7 +14,6 @@ backBtn.addEventListener('click', () => {
 })
 
 
-
 modifBtn.addEventListener('click', () => {
     console.log('frfr')
     modifBtn.style.display = 'none';

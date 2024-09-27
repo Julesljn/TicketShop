@@ -25,6 +25,7 @@ Route::get('/menu/profil', function () {
 
 Route::post('/register/addUser', [UserController::class, 'userStore'])->name(name: 'user.store');
 Route::post('/login/loginUser', [UserController::class,'userLogin'])->name(name: 'user.login');
+Route::post('/menu/profil/modif', [UserController::class,'userUpdate'])->name(name:'user.update');
 
 Route::get('/menu/profil/logout', [UserController::class,'userLogout'])->name(name: 'user.logout');
 Route::get('/menu/profil/delete', [UserController::class,'userDelete'])->name(name: 'user.delete');

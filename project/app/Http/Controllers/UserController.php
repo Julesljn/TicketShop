@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\UserRequest;
+use App\Http\Requests\UserUpdateRequest;
 use illuminate\Http\RedirectResponse;
 use App\Models\User;
 use Auth;
@@ -26,7 +27,7 @@ class UserController extends Controller
         // Response
         return redirect()->route(route: 'home');
     }
-    public function userLogin(LoginRequest $request)
+    public function userLogin(LoginRequest $request): RedirectResponse
     {
         $credentials = $request->only('email', 'password'); // Je prend que email, password
         if (Auth::attempt($credentials)) {
@@ -35,12 +36,12 @@ class UserController extends Controller
         }
         return redirect()->route(route: 'login')->withErrors(provider: 'Adresse Email ou Mot de passe incorrect');
     }
-    public function userLogout()
+    public function userLogout(): RedirectResponse
     {
         Auth::logout();
         return redirect()->route(route: 'home');
     }
-    public function userDelete()
+    public function userDelete(): RedirectResponse
     {
         $user = Auth::user();
 
@@ -49,6 +50,8 @@ class UserController extends Controller
             Auth::logout();
             return redirect()->route(route: 'home');
         }
+    }
+    public function userUpdate(UserUpdateRequest $request) {
 
     }
 }
