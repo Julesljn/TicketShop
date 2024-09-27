@@ -8,7 +8,6 @@
             <div class="h-full w-[20vw] border-r-2 flex flex-col">
                 <ul class="text-white text-xl flex flex-col gap-4 mt-8 ml-9">
                     <li><a href="">Mes informations</a></li>
-                    <li><a href="">Modifier mes informations</a></li>
                     <a href="{{ route('user.logout') }}">Déconnexion</a></li>
                     <li><button id="btn__delete">Supprimer mon compte</button></li>
                 </ul>
