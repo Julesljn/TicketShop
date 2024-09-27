@@ -15,7 +15,6 @@ backBtn.addEventListener('click', () => {
 
 
 modifBtn.addEventListener('click', () => {
-    console.log('frfr')
     modifBtn.style.display = 'none';
     cancelBtn.style.display = 'block';
     uptadeBtn.style.display = 'block';

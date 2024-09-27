@@ -7,6 +7,7 @@ use App\Http\Requests\UserRequest;
 use App\Http\Requests\UserUpdateRequest;
 use illuminate\Http\RedirectResponse;
 use App\Models\User;
+use Request;
 use Auth;
 use Hash;
 class UserController extends Controller
@@ -51,7 +52,16 @@ class UserController extends Controller
             return redirect()->route(route: 'home');
         }
     }
-    public function userUpdate(UserUpdateRequest $request) {
+    public function userUpdate(UserUpdateRequest $request): RedirectResponse
+    {
+        $user = Auth::user();
 
+        $user->update(attributes: [
+            'first_name' => $request['first_name'],
+            'last_name' => $request['last_name'],
+            'email' => $request['email'],
+            'birthday' => $request['birthday'],
+        ]);
+        return redirect()->route(route: 'profil');
     }
 }
